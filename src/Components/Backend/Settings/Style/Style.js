@@ -58,7 +58,7 @@ const Style = ({ attributes, setAttributes, device }) => {
 			</PanelBody>
 
 			{/* ── Card ──────────────────────────────────────────── */}
-			<PanelBody className='bPlPanelBody' title={__('Card', 'team-section')} initialOpen={false}>
+			<PanelBody className='bPlPanelBody' title={__('Team Member', 'team-section')} initialOpen={false}>
 				<Background
 					label={__('Background', 'team-section')}
 					value={styles?.card?.bg}
@@ -95,7 +95,7 @@ const Style = ({ attributes, setAttributes, device }) => {
 			</PanelBody>
 
 			{/* ── Avatar ────────────────────────────────────────── */}
-			<PanelBody className='bPlPanelBody' title={__('Avatar', 'team-section')} initialOpen={false}>
+			<PanelBody className='bPlPanelBody' title={__('Image', 'team-section')} initialOpen={false}>
 				<UnitControl
 					label={__('Size', 'team-section')}
 					value={styles?.avatar?.size}

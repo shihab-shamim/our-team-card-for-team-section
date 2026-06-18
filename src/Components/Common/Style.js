@@ -17,6 +17,8 @@ const Style = ({ attributes, id }) => {
 	const bioSl         = `${infoSl} .tsb_otc_bio`;
 	const socialListSl  = `${cardSl} .tsb_otc_social_links`;
 	const socialLinkSl  = `${socialListSl} li a`;
+	// Relative chain (no #id prefix) for combining with the card :hover state.
+	const socialLinkRel = `.tsb_otc_social_links li a`;
 
 	const cardShadow   = getMultiShadowCSS(styles?.card?.shadow);
 	const avatarShadow = getMultiShadowCSS(styles?.avatar?.shadow);
@@ -115,11 +117,19 @@ const Style = ({ attributes, id }) => {
 			height: ${styles?.social?.iconSize || 14}px;
 		}
 
-		${socialLinkSl}:hover {
-			color: ${styles?.social?.iconHoverColor || '#ffffff'};
+		/* Card hover → show the configured Icon Hover Background on every icon */
+		${cardSl}:hover ${socialLinkRel} {
 			${getBackgroundCSS(styles?.social?.iconHoverBg)}
 		}
-		${socialLinkSl}:hover svg {
+
+		/* Icon hover → change only the hovered icon's color (Icon Hover Color).
+		   Extra :hover gives higher specificity so it wins over the card-hover rule. */
+		${socialLinkSl}:hover,
+		${cardSl}:hover ${socialLinkRel}:hover {
+			color: ${styles?.social?.iconHoverColor || '#ffffff'};
+		}
+		${socialLinkSl}:hover svg,
+		${cardSl}:hover ${socialLinkRel}:hover svg {
 			color: ${styles?.social?.iconHoverColor || '#ffffff'};
 			fill: ${styles?.social?.iconHoverColor || '#ffffff'};
 		}
