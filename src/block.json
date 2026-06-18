@@ -1,0 +1,240 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "tsb/our-team-cards-pro",
+	"version": "1.0.0",
+	"title": "Our Team Cards",
+	"category": "widgets",
+	"description": "Our Team Cards is a WordPress plugin that allows you to create beautiful, fully customizable team member cards on your website.",
+	"keywords": [
+		"team", "cards", "members", "profiles", "our team"
+	],
+	"textdomain": "team-section",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"profiles": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Jon Doe",
+					"designation": "Frontend Developer",
+					"bio": "Passionate about building delightful, accessible user interfaces.",
+					"image": "https://images.pexels.com/photos/555790/pexels-photo-555790.png",
+					"social": [
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' width='14' height='14' fill='currentColor'><path d='M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'/></svg>",
+							"link": "#"
+						}
+					]
+				},
+				{
+					"name": "Jane Smith",
+					"designation": "UI / UX Designer",
+					"bio": "Designing seamless digital experiences with an eye for detail.",
+					"image": "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=600",
+					"social": [
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' width='14' height='14' fill='currentColor'><path d='M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'/></svg>",
+							"link": "#"
+						}
+					]
+				},
+				{
+					"name": "Mike Ross",
+					"designation": "Backend Developer",
+					"bio": "Writing robust, scalable systems that power great products.",
+					"image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
+					"social": [
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' width='14' height='14' fill='currentColor'><path d='M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'/></svg>",
+							"link": "#"
+						}
+					]
+				},
+				{
+					"name": "Emma Watson",
+					"designation": "HR Manager",
+					"bio": "Building a thriving culture by connecting people with purpose.",
+					"image": "https://images.pexels.com/photos/4856247/pexels-photo-4856247.jpeg?auto=compress&cs=tinysrgb&w=600",
+					"social": [
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' width='14' height='14' fill='currentColor'><path d='M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'/></svg>",
+							"link": "#"
+						},
+						{
+							"icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='14' height='14' fill='currentColor'><path d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'/></svg>",
+							"link": "#"
+						}
+					]
+				}
+			]
+		},
+		"options": {
+			"type": "object",
+			"default": {
+				"showName": true,
+				"showDesignation": true,
+				"showBio": false,
+				"showSocial": true,
+				"openInNewTab": true
+			}
+		},
+		"styles": {
+			"type": "object",
+			"default": {
+				"columns": {
+					"desktop": 4,
+					"tablet": 2,
+					"mobile": 1
+				},
+				"columnGap": 30,
+				"rowGap": 30,
+				"maxWidth": "1140px",
+				"bg": {},
+				"padding": {
+					"desktop": { "top": "0px", "right": "15px", "bottom": "0px", "left": "15px" },
+					"tablet":  { "top": "0px", "right": "15px", "bottom": "0px", "left": "15px" },
+					"mobile":  { "top": "0px", "right": "15px", "bottom": "0px", "left": "15px" }
+				},
+				"margin": {
+					"desktop": { "top": "0px", "right": "0px", "bottom": "0px", "left": "0px" },
+					"tablet":  { "top": "0px", "right": "0px", "bottom": "0px", "left": "0px" },
+					"mobile":  { "top": "0px", "right": "0px", "bottom": "0px", "left": "0px" }
+				},
+				"card": {
+					"bg": { "type": "solid", "color": "#ffffff" },
+					"hoverBg": { "type": "gradient", "gradient": "linear-gradient(to right, #3c70a4 0%, #64b2cd 100%)" },
+					"padding": { "top": "30px", "right": "30px", "bottom": "30px", "left": "30px" },
+					"radius": { "top": "150px", "right": "150px", "bottom": "150px", "left": "150px" },
+					"shadow": [
+						{ "hOffset": "0px", "vOffset": "1px", "blur": "4px", "spreed": "0px", "color": "rgba(0,0,0,0.08)", "isInset": false }
+					]
+				},
+				"avatar": {
+					"size": "210px",
+					"radius": { "top": "50%", "right": "50%", "bottom": "50%", "left": "50%" },
+					"padding": { "top": "15px", "right": "15px", "bottom": "15px", "left": "15px" },
+					"imageFit": "cover",
+					"shadow": [
+						{ "hOffset": "0px", "vOffset": "0px", "blur": "20px", "spreed": "0px", "color": "rgba(0,0,0,0.20)", "isInset": true }
+					]
+				},
+				"name": {
+					"color": "#333333",
+					"hoverColor": "#ffffff",
+					"margin": { "top": "0px", "right": "0px", "bottom": "4px", "left": "0px" },
+					"typo": {
+						"fontFamily": "",
+						"fontCategory": "",
+						"fontWeight": "600",
+						"fontVariant": "",
+						"isUploadFont": false,
+						"fontSize": { "desktop": 18, "tablet": 18, "mobile": 17 },
+						"fontStyle": "normal",
+						"textTransform": "none",
+						"textDecoration": "none",
+						"lineHeight": "",
+						"letterSpace": "0px"
+					}
+				},
+				"designation": {
+					"color": "#5a9ec0",
+					"hoverColor": "rgba(255,255,255,0.85)",
+					"margin": { "top": "0px", "right": "0px", "bottom": "0px", "left": "0px" },
+					"typo": {
+						"fontFamily": "",
+						"fontCategory": "",
+						"fontWeight": "400",
+						"fontVariant": "",
+						"isUploadFont": false,
+						"fontSize": { "desktop": 14, "tablet": 14, "mobile": 13 },
+						"fontStyle": "normal",
+						"textTransform": "none",
+						"textDecoration": "none",
+						"lineHeight": "",
+						"letterSpace": "0px"
+					}
+				},
+				"bio": {
+					"color": "#666666",
+					"hoverColor": "rgba(255,255,255,0.85)",
+					"margin": { "top": "10px", "right": "0px", "bottom": "0px", "left": "0px" },
+					"typo": {
+						"fontFamily": "",
+						"fontCategory": "",
+						"fontWeight": "400",
+						"fontVariant": "",
+						"isUploadFont": false,
+						"fontSize": { "desktop": 13, "tablet": 13, "mobile": 12 },
+						"fontStyle": "normal",
+						"textTransform": "none",
+						"textDecoration": "none",
+						"lineHeight": "1.6",
+						"letterSpace": "0px"
+					}
+				},
+				"social": {
+					"iconColor": "#ffffff",
+					"iconHoverColor": "#ffffff",
+					"iconBg": { "type": "gradient", "gradient": "linear-gradient(to right, #3c70a4 0%, #64b2cd 100%)" },
+					"iconHoverBg": { "type": "solid", "color": "#1d1d1d" },
+					"iconSize": 14,
+					"btnSize": "36px",
+					"btnRadius": { "top": "50%", "right": "50%", "bottom": "50%", "left": "50%" },
+					"gap": 6,
+					"margin": { "top": "15px", "right": "0px", "bottom": "0px", "left": "0px" }
+				}
+			}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./view.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
