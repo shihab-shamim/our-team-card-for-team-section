@@ -10,7 +10,7 @@ const normalizeIconColor = (svgString) => {
 		});
 };
 
-export const OneCard = ({ attributes }) => {
+export const OneCard = ({ attributes, Richtext, setAttributes }) => {
 	const {
 		profiles = [],
 		options = { showName: true, showDesignation: true, showBio: false, showSocial: true, openInNewTab: true }
@@ -30,17 +30,17 @@ export const OneCard = ({ attributes }) => {
 							</div>
 
 							<div className='tsb_otc_info'>
-								{options.showName && profile.name && (
-									<h5 className='tsb_otc_name'>{profile.name}</h5>
-								)}
+								{options.showName && profile.name && !Richtext && <h5 className='tsb_otc_name' dangerouslySetInnerHTML={{ __html: profile.name }} />}
 
-								{options.showDesignation && profile.designation && (
-									<p className='tsb_otc_designation'>{profile.designation}</p>
-								)}
+								{options.showName && Richtext && <Richtext tagName="h5" value={profile.name} onChange={(value) => setAttributes({ ...attributes, profiles: attributes.profiles.map((p, i) => i === index ? { ...p, name: value } : p) })} className='tsb_otc_name' placeholder="Enter name" />}
 
-								{options.showBio && profile.bio && (
-									<p className='tsb_otc_bio'>{profile.bio}</p>
-								)}
+								{options.showDesignation && profile.designation && !Richtext && <p className='tsb_otc_designation' dangerouslySetInnerHTML={{ __html: profile.designation }} />}
+
+								{options.showDesignation && Richtext && <Richtext tagName="p" value={profile.designation} onChange={(value) => setAttributes({ ...attributes, profiles: attributes.profiles.map((p, i) => i === index ? { ...p, designation: value } : p) })} className='tsb_otc_designation' placeholder="Enter designation" />}
+
+								{options.showBio && profile.bio && !Richtext && <p className='tsb_otc_bio' dangerouslySetInnerHTML={{ __html: profile.bio }} />}
+
+								{options.showBio && Richtext && <Richtext tagName="p" value={profile.bio} onChange={(value) => setAttributes({ ...attributes, profiles: attributes.profiles.map((p, i) => i === index ? { ...p, bio: value } : p) })} className='tsb_otc_bio' placeholder="Enter bio" />}
 							</div>
 
 							{options.showSocial && profile.social?.length > 0 && (

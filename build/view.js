@@ -1213,7 +1213,9 @@ const normalizeIconColor = svgString => {
   });
 };
 const OneCard = ({
-  attributes
+  attributes,
+  Richtext,
+  setAttributes
 }) => {
   const {
     profiles = [],
@@ -1243,13 +1245,58 @@ const OneCard = ({
     className: "tsb_otc_avatar_placeholder"
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsb_otc_info"
-  }, options.showName && profile.name && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", {
-    className: "tsb_otc_name"
-  }, profile.name), options.showDesignation && profile.designation && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "tsb_otc_designation"
-  }, profile.designation), options.showBio && profile.bio && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "tsb_otc_bio"
-  }, profile.bio)), options.showSocial && profile.social?.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+  }, options.showName && profile.name && !Richtext && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", {
+    className: "tsb_otc_name",
+    dangerouslySetInnerHTML: {
+      __html: profile.name
+    }
+  }), options.showName && Richtext && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Richtext, {
+    tagName: "h5",
+    value: profile.name,
+    onChange: value => setAttributes({
+      ...attributes,
+      profiles: attributes.profiles.map((p, i) => i === index ? {
+        ...p,
+        name: value
+      } : p)
+    }),
+    className: "tsb_otc_name",
+    placeholder: "Enter name"
+  }), options.showDesignation && profile.designation && !Richtext && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "tsb_otc_designation",
+    dangerouslySetInnerHTML: {
+      __html: profile.designation
+    }
+  }), options.showDesignation && Richtext && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Richtext, {
+    tagName: "p",
+    value: profile.designation,
+    onChange: value => setAttributes({
+      ...attributes,
+      profiles: attributes.profiles.map((p, i) => i === index ? {
+        ...p,
+        designation: value
+      } : p)
+    }),
+    className: "tsb_otc_designation",
+    placeholder: "Enter designation"
+  }), options.showBio && profile.bio && !Richtext && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "tsb_otc_bio",
+    dangerouslySetInnerHTML: {
+      __html: profile.bio
+    }
+  }), options.showBio && Richtext && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Richtext, {
+    tagName: "p",
+    value: profile.bio,
+    onChange: value => setAttributes({
+      ...attributes,
+      profiles: attributes.profiles.map((p, i) => i === index ? {
+        ...p,
+        bio: value
+      } : p)
+    }),
+    className: "tsb_otc_bio",
+    placeholder: "Enter bio"
+  })), options.showSocial && profile.social?.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "tsb_otc_social_links"
   }, profile.social.map((item, sIndex) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     key: sIndex
